@@ -32,7 +32,7 @@ An example to perform MinDiff training on Waterbirds dataset: ```python min_diff
 ### CelebA Dataset
 CelebA dataset can be download from this [link](https://www.kaggle.com/jessicali9530/celeba-dataset).
 
-After downloading, store following files/folders in the `[root_dir]/celebA` directory:
+After downloading, store following files/folders in the `[root_dir]/celeba` directory:
 
 - `celeba-dataset/list_eval_partition.csv`
 - `celeba-dataset/list_attr_celeba.csv`
