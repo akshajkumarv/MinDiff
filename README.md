@@ -6,21 +6,22 @@ The success of deep learning is driven by the counter-intuitive ability of over-
 
 ## Dataset and Code
 
-## Waterbirds Dataset
-Please refer to this [repo](https://github.com/kohpangwei/group_DRO) to download the Waterbirds dataset.
+### Waterbirds Dataset
+Please refer to this [repo](https://github.com/kohpangwei/group_DRO) to download the Waterbirds dataset. The feature representations can be obtained by passing the images through a pre-trained ResNet-18 model and storing the last layer activations. Instead, these representations can also be downloaded directly from [here](https://worksheets.codalab.org/bundles/0x7e85a2f71a8545e9a81221d3142cb05a).  
 
+After downloading, store following files/folders in the `[root_dir]/waterbirds` directory:
 
-## CelebA Dataset
+- `extracted_features.npy`
+- `waterbird_complete95_forest2water2/`
+
+An example to perform MinDiff training on Waterbirds dataset: ```python min_diff.py```  
+
+### CelebA Dataset
 ClebA dataset can be download from this [link](https://www.kaggle.com/jessicali9530/celeba-dataset).
 
-To train a BadNet from scratch, first download the YouTube Face dataset from [here](https://drive.google.com/drive/folders/13WdwQKlhXYXBictZdC524eMv4Pr6QS69?usp=sharing) and follow the steps below: 
+After downloading, store following files/folders in the `[root_dir]/celebA` directory:
 
-* Step 1: Poison 10% of training data using the sunglasses trigger by running ```python poison.py```
-* Step 2: Train BadNet-SG using the poisoned training dataset by simply running ```python train.py``` 
-
-We include a pre-trained BadNet-SG model under ```/results/attack/badnet/bd_net.h5```. 
-
-## Pre-Deployment Defense
-
-To obtain a pre-deployment patched model, follow the steps below: 
+- `celeba-dataset/list_eval_partition.csv`
+- `celeba-dataset/list_attr_celeba.csv`
+- `celeba-dataset/img_align_celeba/`
 
